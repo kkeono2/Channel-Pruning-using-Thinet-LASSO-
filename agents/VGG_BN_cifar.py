@@ -241,27 +241,6 @@ class VGG_BN_cifar(BaseAgent):
                         pruned_next_inputs_features = self.model.features[:next_m_idx](inputs)
                         weight_reconstruction(next_m, pruned_next_inputs_features, next_output_features, use_gpu=self.cuda)
                 self.stayed_channels[str(i) + '.conv1'] = set(indices_stayed)
-        elif method == 'gradient':
-            if not self.channel_importance:
-                self.record_channel_importance()
-            for i, m in enumerate(self.named_conv_list.values()):
-                if isinstance(m, torch.nn.Conv2d):
-                    bn = self.named_modules_list[str(i) + '.bn']
-                    if str(i + 1) + '.conv' in self.named_conv_list:
-                        next_m = self.named_modules_list[str(i + 1) + '.conv']
-                    else:
-                        next_m = self.model.classifier[0]
-                    channel_importance = self.channel_importance[str(i) + '.conv']
-                    channel_importance = channel_importance / channel_importance.sum()
-                    threshold = k / channel_importance.size(0)
-                    indices_stayed = [i for i in range(len(channel_importance)) if channel_importance[i] > threshold]
-                    module_surgery(m, bn, next_m, indices_stayed)
-                    if not isinstance(next_m, torch.nn.Linear):
-                        next_output_features = self.original_conv_output[str(i + 1) + '.conv']
-                        next_m_idx = self.named_conv_idx_list[str(i + 1) + '.conv']
-                        pruned_next_inputs_features = self.model.features[:next_m_idx](inputs)
-                        weight_reconstruction(next_m, pruned_next_inputs_features, next_output_features, use_gpu=self.cuda)
-                self.stayed_channels[str(i) + '.conv'] = set(indices_stayed)
 
         elif method == 'max_output': # NO weight reconstuction
             for i, m in enumerate(list(self.named_conv_list.values())[:-1]):    # 마지막 레이어 전까지
