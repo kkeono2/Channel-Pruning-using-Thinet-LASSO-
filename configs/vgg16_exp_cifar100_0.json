@@ -1,0 +1,38 @@
+{
+  "exp_name": "vgg16_exp_cifar100_0",
+  "agent": "VGG16Agent",
+  "mode": "train",
+
+  "cuda": true,
+  "gpu_device": 0,
+  "seed": 1,
+
+  "img_size": 32,
+  "input_channels": 3,
+
+  "num_classes": 100,
+
+  "learning_rate": 0.1,
+  "weight_decay": 0.0005,
+  "momentum": 0.9,
+
+  "milestones": [60, 120, 160],
+  "gamma": 0.2,
+
+  "decorr_reguarization": "",
+  "lambda": "",
+
+  "batch_size": 128,
+  "max_epoch": 200,
+
+  "checkpoint_file": "checkpoint.pth",
+  "best_file": "model_best.pth.tar",
+
+  "data_loader": "Cifar100DataLoader",
+  "data_loader_workers": 4,
+  "pin_memory": true,
+  "async_loading": true,
+
+  "data_mode": "download",
+  "data_folder": ""
+}
