@@ -1,6 +1,7 @@
 ## Pytorch Implementation of Pruning Methods about Thinet and LASSO
-Thinet(greedy) paper : ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression(ICCV,2017)
-LASSO paper: Channel Pruning for Accelerating Very Deep Neural Networks(ICCV,2017)
+Thinet(option : greedy) paper : ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression(ICCV,2017)
+LASSO(option : lasso) paper: Channel Pruning for Accelerating Very Deep Neural Networks(ICCV,2017)
+
 
 ## Requirements
 Python 3.7
