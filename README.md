@@ -12,7 +12,7 @@ Pytorch 1.4
 ## Prune on CIFAR-100
 
 ## VGG16_BN weight and Resnet18 weight
-have to download vgg16 weight 
+have to download model weight 
 
 https://drive.google.com/drive/folders/1D0zxgCMg3nDUGGxCt8n2PDtcU6FHVysP?usp=sharing
 
