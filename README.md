@@ -16,3 +16,8 @@ have to download model weight
 
 https://drive.google.com/drive/folders/1D0zxgCMg3nDUGGxCt8n2PDtcU6FHVysP?usp=sharing
 
+
+# Experiment results
+
+<img src="https://user-images.githubusercontent.com/46774714/101133630-73042d00-364c-11eb-849b-a553c189af00.jpg" width="85%" height="80%">
+
