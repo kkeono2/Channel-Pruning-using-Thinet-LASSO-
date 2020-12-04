@@ -19,5 +19,6 @@ https://drive.google.com/drive/folders/1D0zxgCMg3nDUGGxCt8n2PDtcU6FHVysP?usp=sha
 
 # Experiment results
 
-<img src="https://user-images.githubusercontent.com/46774714/101133630-73042d00-364c-11eb-849b-a553c189af00.jpg" width="85%" height="80%">
+<img src="https://user-images.githubusercontent.com/46774714/101133630-73042d00-364c-11eb-849b-a553c189af00.jpg" width="100%" height="90%">
 
+<img src="https://user-images.githubusercontent.com/46774714/101134146-47ce0d80-364d-11eb-9f75-29e4a6e451f0.jpg" width="100%" height="90%">
